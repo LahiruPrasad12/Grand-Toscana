@@ -14,6 +14,8 @@ class Shop extends Model
     // Specify the fillable attributes
     protected $fillable = ['name', 'branch'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+
     public function users()
     {
         return $this->hasMany(User::class);
